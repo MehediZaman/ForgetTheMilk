@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<test-run id="2" testcasecount="0" result="Failed" label="Invalid" total="0" passed="0" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.0.5797.27553" clr-version="4.0.30319.42000" start-time="2015-11-29 15:41:20Z" end-time="2015-11-29 15:41:20Z" duration="0.040912">
+  <command-line><![CDATA[nunit3-console.exe  ConsoleVerification\bin\Debug\ConsoleVerification.exe]]></command-line>
+  <test-suite type="Assembly" id="0-1" name="ConsoleVerification.exe" fullname="E:\Dropbox\_Visual Studio 2015 Projects\ForgetTheMilk\packages\NUnit.Console.3.0.0\tools\ConsoleVerification\bin\Debug\ConsoleVerification.exe" testcasecount="0" runstate="NotRunnable" result="Failed" label="Invalid">
+    <properties>
+      <property name="_SKIPREASON" value="File not found: E:\Dropbox\_Visual Studio 2015 Projects\ForgetTheMilk\packages\NUnit.Console.3.0.0\tools\ConsoleVerification\bin\Debug\ConsoleVerification.exe" />
+    </properties>
+    <reason>
+      <message>File not found: E:\Dropbox\_Visual Studio 2015 Projects\ForgetTheMilk\packages\NUnit.Console.3.0.0\tools\ConsoleVerification\bin\Debug\ConsoleVerification.exe</message>
+    </reason>
+  </test-suite>
+</test-run>
