@@ -37,7 +37,6 @@ namespace ForgetTheMilk.Controllers
             {
                 var dueDate = dueDatePattern.Match(task);
                 var monthInput = dueDate.Groups[1].Value;
-                //var month = monthInput == "may" ? 5 : 4;
                 var month = DateTime.ParseExact(monthInput, "MMM", CultureInfo.CurrentCulture).Month;
                 var day = Convert.ToInt32(dueDate.Groups[2].Value);
                 var year = today.Year;
@@ -51,12 +50,22 @@ namespace ForgetTheMilk.Controllers
                 {
                     DueDate = new DateTime(year, month, day);
                         
-              }
+                }
                 
+            }
+
+            var linkPattern = new Regex(@"(http://[^\s]+)");
+            var hasLink = linkPattern.IsMatch(task);
+
+            if (hasLink)
+            {
+                var link = linkPattern.Match(task);
+                Link = link.Groups[1].Value;
             }
         }
 
         public string Description { get; set; }
+        public string Link { get; set; }
         public DateTime? DueDate { get; set; }
     }
 }

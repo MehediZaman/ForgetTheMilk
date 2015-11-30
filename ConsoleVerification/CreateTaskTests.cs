@@ -24,23 +24,22 @@ namespace ConsoleVerification
         }
 
         [Test]
-        public void MayDueDateDoesWrapYear()
+        [TestCase("Pick up the groceries may 5 - as of 2015-05-31")]
+        [TestCase("Pick up the groceries apr 5 - as of 2015-05-31")]
+        public void DoesWrapYear(string input)
         {
-            var input = "Pick up the groceries may 5 - as of 2015-05-31";
-
             var today = new DateTime(2015, 5, 31);
 
             var task = new Task(input, today);
 
-            Expect(task.DueDate, Is.EqualTo(new DateTime(2016, 5, 5)));
+            Expect(task.DueDate.Value.Year, Is.EqualTo(2016));
             
         }
 
         [Test]
-        public void MayDueDateDoesNotWrapYear()
+        [TestCase("Pick up the groceries may 5 - as of 2015-05-04")]
+        public void DoesNotWrapYear(string input)
         {
-            var input = "Pick up the groceries may 5 - as of 2015-05-04";
-
             var today = new DateTime(2015, 5, 4);
 
             var task = new Task(input, today);

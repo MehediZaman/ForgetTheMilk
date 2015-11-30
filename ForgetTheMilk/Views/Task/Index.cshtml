@@ -18,9 +18,12 @@
         <th>
             Description
         </th>
-        
+
         <th>
             Due Date
+        </th>
+        <th>
+            Link
         </th>
     </tr>
     <tbody>
@@ -32,6 +35,9 @@
                 </td>
                 <td>
                     @(task.DueDate.HasValue ? @task.DueDate.Value.ToShortDateString() : "")
+                </td>
+                <td>
+                    @task.Link
                 </td>
             </tr>
         }
